@@ -1,0 +1,260 @@
+:root {
+  --dark-green: #2c6e49;
+  --light-green: #4c956c;
+  --beige: #fefee3;
+  --beige-dark: #e9e4ce;
+  --pink: #ce7b91;
+  --caramel: #d68c45;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  height: 20px;
+}
+
+body {
+  font-size: 12px;
+  font-family: "space mono", Georgia, "Times New Roman", Times, serif;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar-container {
+  background-color: var(--dark-green);
+  color: var(--beige);
+}
+
+.sidebar-container svg {
+  fill: var(--beige);
+  height: 1rem;
+}
+
+.dashboard-title {
+  font-size: 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-items: stretch;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title svg {
+  height: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard ul {
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.dashboard li {
+  display: grid;
+  align-items: center;
+  justify-items: stretch;
+  grid-template-columns: 1fr 4fr;
+  margin: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.dashboard li:hover,
+.dashboard li:hover svg {
+  color: var(--pink);
+  fill: var(--pink);
+}
+
+/* MAIN PAGE */
+
+.container-page-right {
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* HEADER */
+
+.header-container {
+  background-color: var(--beige);
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* TOP */
+
+.header-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  height: 100%;
+  margin: 0.5rem 1.75rem;
+}
+
+.search-bar input {
+  max-width: 38rem;
+  flex-basis: 80%;
+  height: 1rem;
+  background-color: var(--beige-dark);
+  border-radius: 2rem;
+  border: none;
+}
+
+.search-bar,
+.dashboard-log {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+/* BOTTOM */
+
+.header-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin: 0.75rem 1.75rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile img {
+  height: 2.75rem;
+}
+
+.profile p:nth-child(1) {
+  font-size: 0.75rem;
+}
+
+.profile p:last-child {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.header-bottom button {
+  cursor: pointer;
+  font-family: "space mono";
+  border: none;
+  border-radius: 2rem;
+  color: var(--beige);
+  background-color: var(--dark-green);
+  height: 1.5rem;
+  width: 4rem;
+}
+
+.header-bottom button:hover {
+  color: var(--pink);
+}
+
+/* PROJECTS */
+
+.main-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-container {
+  background-color: var(--beige-dark);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project {
+  background-color: var(--beige);
+  border-radius: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr 19fr;
+  transition-duration: 0.5s;
+  height: 12rem;
+}
+
+.project:hover {
+  grid-template-columns: 4fr 15fr;
+}
+
+.project .pink-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.project-text {
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.project-text div {
+  text-align: end;
+}
+
+.project-text div img {
+  margin-left: 0.75rem;
+  cursor: pointer;
+}
+
+.container-projects {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+}
+
+/* PAGE CONTAINER RIGHT */
+
+.page-container-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+/* ANNOUNCEMENTS */
+
+.announcements-container,
+.trending-container {
+  background-color: var(--beige);
+  height: 80%;
+  border-radius: 0.25rem;
+  width: 15rem;
+  padding: 1rem;
+}
+
+.announcement {
+  margin-bottom: 1rem;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.user img {
+  height: 2.5rem;
+}
+
+.main-title.trending {
+  margin-top: 1rem;
+}
